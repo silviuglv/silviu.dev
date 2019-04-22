@@ -1,0 +1,47 @@
+$phone: "all and (min-width: 360px)"
+$phone-xl: "all and (min-width: 480px)"
+$tablet: "all and (min-width: 768px)"
+$laptop: "all and (min-width: 960px)"
+$desktop: "all and (min-width: 1200px)"
+
+$system-fonts: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  
+\:root 
+  --blue: #0CEBEB
+  --green: #29FFC6
+  --purple: #E500F8
+  --silver: #F7F7F7
+  --dark: #181A1F
+
+  font-size: 16px
+  @media #{$phone-xl}
+    font-size: 18px
+  @media #{$laptop}
+    font-size: 20px
+  @media #{$desktop}
+    font-size: 22px
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html, body
+  font-family: futura-pt, sans-serif, $system-fonts
+  font-size: 16px
+
+.global
+  &__container
+    width: 300px
+    margin: 0 auto
+    @media #{$phone} 
+      width: 340px
+    @media #{$phone-xl} 
+      width: 460px
+    @media #{$tablet} 
+      width: 720px
+    @media #{$laptop} 
+      width: 900px
+    @media #{$desktop} 
+      width: 1080px
+
+img
+  max-width: 100%
