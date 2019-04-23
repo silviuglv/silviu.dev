@@ -94,7 +94,7 @@ const EmailWrapper = styled.div`
 `;
 class Contact extends Component {
   state = {
-    email: 'omgimmailig@silviu.dev',
+    email: 'omgimmailing@silviu.dev',
   };
 
   handleEmailChange = () => {

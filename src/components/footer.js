@@ -39,28 +39,60 @@ const Icon = styled.a`
 const Copy = styled.span`
   display: block;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 1rem;
   @media (min-width: 768px) {
     order: 1;
+    margin-top: 0;
   }
 `;
 
+const Resume = styled.a`
+  color: inherit;
+  text-align: center;
+  display block;
+  margin-top: 15px;
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    order: 2;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+`;
+
+const CopyWrapper = styled.div`
+  @media (min-width: 768px) {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+`;
 const Footer = () => (
   <Block>
     <div className="global__container">
       <IconContainer>
-        <Icon href="https://www.gatsbyjs.org" target="_blank">
+        <Icon
+          href="https://www.gatsbyjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={gatsby} alt="Build with GatsbyJs" />
         </Icon>
-        <Icon href="https://www.netlify.com" target="_blank">
+        <Icon
+          href="https://www.netlify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
             alt="Deployed on Netlify"
           />
         </Icon>
       </IconContainer>
-      <Copy>&copy; silviu.dev</Copy>
+      <CopyWrapper>
+        <Resume href="/silviu-glavan-resume.pdf">Resume</Resume>
+        <Copy>&copy; silviu.dev</Copy>
+      </CopyWrapper>
     </div>
   </Block>
 );

@@ -28,7 +28,7 @@ const FAQ = () => {
       <div className="global__container">
         <Toggle>
           <Tab>
-            <Title type="title">Do you even work or just brag?</Title>
+            <Title type="title">Do you even work, bro?</Title>
             <Content type="content">
               I'm currently working at{' '}
               <InlineLink
@@ -44,23 +44,38 @@ const FAQ = () => {
             </Content>
           </Tab>
           <Tab>
-            <Title type="title">How do you build these awesome products?</Title>
+            <Title type="title">Any cool tech and tools?</Title>
             <Content type="content">
-              On a daily basis, I mainly work with HTML, CSS and Vanilla JS.
+              My stack is JS centred for frontend as well as backend. I enjoy
+              working with React and Serverless. Also, I'm a big fan of
+              JAMStack.
             </Content>
           </Tab>
           <Tab>
-            <Title type="title">Do you even work or just brag?</Title>
+            <Title type="title">Anything that stands out?</Title>
             <Content type="content">
-              I'm content. Just some content to keep me going for now. I will
-              talk about my current jub in here eventually.
+              I'm currently working on a personal project that uses the
+              Instagram Graph API to render user-friendly insights data. It uses
+              React for the frontend and an AWS Lambda API along with DynamoDB.
+              <p>
+                <b>
+                  <InlineLink
+                    href="https://influb.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    influb.com
+                  </InlineLink>
+                </b>
+              </p>
             </Content>
           </Tab>
           <Tab>
-            <Title type="title">More bragging!?</Title>
+            <Title type="title">Do you do fun?</Title>
             <Content type="content">
-              I enjoy wine, actually, I have a Court of Masters Sommeliers
-              Introductory Diploma and I can cook a whole lasagna from scratch
+              I'm a big wine lover, in fact, I have a Court of Masters
+              Sommeliers Introductory Diploma. Also, I can cook a whole lasagna
+              from scratch.
             </Content>
           </Tab>
         </Toggle>

@@ -47,10 +47,10 @@ const Highlight = styled.span`
 `;
 
 const Portfolio = styled.div`
-  padding-top: 100px;
+  padding-top: 140px;
   background-image: url(${portfolio});
   background-size: auto 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   position: absolute;
   top: 110px;
   width: 100%;
