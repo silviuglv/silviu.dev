@@ -129,7 +129,7 @@ class Websites extends Component {
       <Section>
         <div className="global__container">
           <Title>
-            No really, I've build over <Highlight>200</Highlight> so far
+            No really, I've built over <Highlight>200</Highlight> so far
           </Title>
           <Portfolio onScroll={this.handleScroll} id="portfolio" />
           <CTA to="/#contact">Oh, now we're talking</CTA>
