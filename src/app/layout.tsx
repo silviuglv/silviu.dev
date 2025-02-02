@@ -3,7 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';
 import Header from 'components/Header';
-
+import { ThemeProvider } from 'next-themes';
 const geistMono = Roboto_Mono({
   variable: '--font-roboto-mono',
   subsets: ['latin'],
@@ -20,13 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Header />
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

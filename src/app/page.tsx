@@ -1,10 +1,10 @@
 import BlogPosts from 'components/BlogPosts';
 
-export default function Home() {
+export default async function Home() {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="prose prose-invert prose-sm max-w-none">
+        <div className="prose dark:prose-invert prose-sm max-w-none">
           <h1>Silviu Glăvan</h1>
           <p className="text-lg">
             <em>Software Engineer</em>

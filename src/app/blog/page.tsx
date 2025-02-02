@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="prose prose-invert prose-sm max-w-none">
+        <div className="prose dark:prose-invert prose-sm max-w-none">
           <h1>Blog</h1>
           <BlogPosts
             data={[

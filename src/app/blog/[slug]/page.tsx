@@ -2,7 +2,7 @@ export default function BlogPost() {
   return (
     <section className="py-16">
       <div className="container">
-        <article className="prose prose-invert prose-sm max-w-none">
+        <article className="prose dark:prose-invert prose-sm max-w-none">
           <h1>Best Practices for CI/CD in Modern Web Applications</h1>
           <p className="text-gray-400">18-03-2024</p>
           <p>
