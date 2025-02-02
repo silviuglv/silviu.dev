@@ -1,11 +1,11 @@
 import fs from 'node:fs/promises';
+import { glob } from 'glob';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from 'rehype-prism-plus';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeCodeTitles from 'rehype-code-titles';
-import { glob } from 'glob';
 
 async function parseMdx<TFrontmatter extends Record<string, unknown>>(
   raw: string
