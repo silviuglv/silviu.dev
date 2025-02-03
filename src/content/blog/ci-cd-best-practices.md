@@ -5,6 +5,22 @@ date: 2024-03-08
 
 Continuous Integration and Continuous Deployment (CI/CD) are essential for modern web applications, enabling teams to deliver updates quickly and reliably. Implementing CI/CD correctly can improve developer productivity, reduce bugs, and enhance the overall user experience.
 
+```typescript
+export async function getMdx<T extends Record<string, unknown>>(
+  source: string
+): Promise<MDXContent<T> | null> {
+  const [path] = await glob(source);
+  if (!path) return null;
+
+  return await getMdxFromPath<T>(path);
+}
+
+export type BlogPostFrontmatter = {
+  title: string;
+  date: string;
+};
+```
+
 ## 1. Automate Everything
 
 Automation is the core of CI/CD. From testing to deployment, every step should be automated to minimize human error. Use tools like GitHub Actions, GitLab CI/CD, or CircleCI to automate:
