@@ -37,7 +37,7 @@ const Navigation: FC = () => {
         <NavigationItem href="/">~ home</NavigationItem>
         <NavigationItem href="/blog">/blog</NavigationItem>
         <NavigationItem href="/faq">/faq</NavigationItem>
-        <NavigationItem href="/contact">/contact</NavigationItem>
+        {/* <NavigationItem href="/contact">/contact</NavigationItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

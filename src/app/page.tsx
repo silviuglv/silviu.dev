@@ -1,4 +1,5 @@
 import BlogPosts from 'components/BlogPosts';
+import SocialLinks from 'components/SocialLinks';
 import { queryMdx } from 'libs/mdx';
 
 export default async function Home() {
@@ -26,6 +27,8 @@ export default async function Home() {
           </p>
           <h2>Latest posts</h2>
           <BlogPosts data={posts} />
+          <h2>Let&apos;s connect</h2>
+          <SocialLinks />
         </div>
       </div>
     </section>
