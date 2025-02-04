@@ -1,8 +1,8 @@
 import BlogPosts from 'components/BlogPosts';
-import { queryMdx } from 'libs/mdx';
+import { BlogPostFrontmatter, queryMdx } from 'libs/mdx';
 
 export default async function Blog() {
-  const data = await queryMdx<{ title: string; date: string }>(
+  const data = await queryMdx<BlogPostFrontmatter>(
     'src/content/blog/*.{mdx,md}'
   );
 

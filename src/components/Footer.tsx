@@ -2,9 +2,11 @@ import { FC } from 'react';
 
 const Footer: FC = () => {
   return (
-    <footer className="text-sm py-3 text-muted-foreground">
+    <footer className="full-w py-3">
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Silviu-Andrei Glavan</p>
+        <p className="text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} Silviu-Andrei Glavan
+        </p>
       </div>
     </footer>
   );

@@ -71,3 +71,7 @@ export type BlogPostFrontmatter = {
   title: string;
   date: string;
 };
+
+export type FAQFrontmatter = {
+  question: string;
+};

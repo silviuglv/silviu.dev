@@ -1,9 +1,19 @@
-import { BlogPostFrontmatter, getMdx } from 'libs/mdx';
+import { BlogPostFrontmatter, getMdx, queryMdx } from 'libs/mdx';
 import { notFound } from 'next/navigation';
 
 type BlogPostProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  const data = await queryMdx<BlogPostFrontmatter>(
+    'src/content/blog/*.{mdx,md}'
+  );
+
+  return data.map((blog) => ({
+    slug: blog.filename,
+  }));
+}
 
 export default async function BlogPost(props: BlogPostProps) {
   const params = await props.params;
