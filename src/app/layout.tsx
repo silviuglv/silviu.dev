@@ -24,10 +24,11 @@ export const metadata: Metadata = {
   description:
     "I'm a self-taught developer from Romania 🇷🇴, sharing my thoughts on TypeScript, React, GraphQL, and Serverless.",
   openGraph: {
-    title: "My Portfolio",
-    description: "This is my portfolio.",
+    title: "Silviu Glavan | Personal website",
+    description:
+      "I'm a self-taught developer from Romania 🇷🇴, sharing my thoughts on TypeScript, React, GraphQL, and Serverless.",
     url: BASE_URL,
-    siteName: "My Portfolio",
+    siteName: "silviu.dev",
     locale: "en_US",
     type: "website",
   },
