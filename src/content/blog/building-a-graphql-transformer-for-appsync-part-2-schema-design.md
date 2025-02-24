@@ -141,7 +141,7 @@ Another benefit is that it can have other fields as well. For example, if declar
 
 This will become clearer in the next post on table design.
 
-# Interfaces and Unions
+## Interfaces and Unions
 
 Since we introduced interfaces earlier, I won’t go into much detail—just know that you can use them. Unions work similarly but don’t require shared fields.
 
