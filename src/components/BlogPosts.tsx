@@ -2,18 +2,11 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 type BlogPostsProps = {
-  data: { title: string; date: string; slug: string }[];
+  data: { title: string; date: Date; slug: string }[];
 };
 
 const BlogPosts: FC<BlogPostsProps> = (props) => {
   const { data } = props;
-
-  const sorted = data.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-
-    return dateB.getTime() - dateA.getTime();
-  });
 
   return (
     <div className="w-full flex flex-col">
@@ -21,7 +14,7 @@ const BlogPosts: FC<BlogPostsProps> = (props) => {
         <span className="flex-auto md:flex-[0_0_120px]">Date</span>
         <span className="flex-auto">Title</span>
       </div>
-      {sorted.map((post) => (
+      {data.map((post) => (
         <Link
           key={post.slug}
           href={`/blog/${post.slug}`}

@@ -1,11 +1,12 @@
 import BlogPosts from 'components/BlogPosts';
 import SocialLinks from 'components/SocialLinks';
-import { queryMdx } from 'libs/mdx';
+import { queryPosts } from 'libs/content';
 
 export default async function Home() {
-  const data = await queryMdx<{ title: string; date: string }>(
-    'src/content/blog/*.{mdx,md}'
-  );
+  const data = await queryPosts({
+    devMode: process.env.NODE_ENV === 'development',
+    limit: 10,
+  });
 
   const posts = data.map((blog) => ({
     title: blog.frontmatter.title,
@@ -23,7 +24,7 @@ export default async function Home() {
           </p>
           <p className="mb-4">
             I&apos;m a self-taught developer from Romania 🇷🇴, sharing my
-            thoughts on JavaScript, TypeScript, React, and Serverless.
+            thoughts on TypeScript, React, GraphQL, and Serverless.
           </p>
           <h2>Latest posts</h2>
           <BlogPosts data={posts} />

@@ -19,7 +19,7 @@ Here’s a small utility function that checks environment variables at runtime w
 
 **!Important:** This function uses [const modifiers on type parameters](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html#const-type-parameters) so you must use TypeScript 5.0 or above.
 
-```ts
+```typescript
 // checkEnv.ts
 
 type EnvVarWithOptions = {
@@ -34,7 +34,7 @@ type Names<T> = T extends Array<infer N>
   ? N extends string
     ? N
     : N extends EnvVarWithOptions
-    ? N['name']
+    ? N["name"]
     : never
   : never;
 
@@ -42,8 +42,8 @@ type ValueType<T, K> = T extends Array<infer N>
   ? N extends K
     ? string
     : N extends EnvVarWithOptions
-    ? N['name'] extends K
-      ? N['optional'] extends true
+    ? N["name"] extends K
+      ? N["optional"] extends true
         ? string | undefined
         : string
       : never
@@ -56,7 +56,7 @@ export function checkEnv<const T extends Array<EnvVar>>(
   const env = {} as { [K in Names<T>]: ValueType<T, K> };
 
   for (const param of params) {
-    if (typeof param === 'string') {
+    if (typeof param === "string") {
       if (!Object.hasOwn(process.env, param)) {
         throw new Error(`${param} not available in process.env.`);
       }
@@ -67,7 +67,7 @@ export function checkEnv<const T extends Array<EnvVar>>(
 
       if (
         !Object.hasOwn(process.env, name) &&
-        typeof defaultValue !== 'string' &&
+        typeof defaultValue !== "string" &&
         optional !== true
       ) {
         throw new Error(`${name} not available in process.env.`);

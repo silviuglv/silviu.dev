@@ -1,10 +1,14 @@
-import BlogPosts from 'components/BlogPosts';
-import { BlogPostFrontmatter, queryMdx } from 'libs/mdx';
+import BlogPosts from "components/BlogPosts";
+import { queryPosts } from "libs/content";
+
+export const metadata = {
+  title: "Blog",
+};
 
 export default async function Blog() {
-  const data = await queryMdx<BlogPostFrontmatter>(
-    'src/content/blog/*.{mdx,md}'
-  );
+  const data = await queryPosts({
+    devMode: process.env.NODE_ENV === "development",
+  });
 
   const posts = data.map((blog) => ({
     title: blog.frontmatter.title,

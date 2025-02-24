@@ -1,6 +1,6 @@
 ---
 date: 2025-02-17
-title: 'Building a GraphQL Transformer Library for AWS AppSync: Part 1 – Motivation'
+title: "Building a GraphQL Transformer Library for AWS AppSync: Part 1 – Motivation"
 ---
 
 When it comes to building GraphQL servers, [AWS AppSync](https://aws.amazon.com/pm/appsync) is my favourite solution. It is a managed, serverless service that makes it easy to build efficient and scalable APIs.

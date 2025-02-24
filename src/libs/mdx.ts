@@ -1,13 +1,15 @@
+import type { ReactElement } from 'react';
+
 import fs from 'node:fs/promises';
 import { glob } from 'glob';
+import path from 'node:path';
+
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeCodeTitles from 'rehype-code-titles';
-import { ReactElement } from 'react';
-import path from 'node:path';
 
 type MDXContent<T extends Record<string, unknown>> = {
   frontmatter: T;

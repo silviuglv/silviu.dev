@@ -1,8 +1,13 @@
-import FAQList from 'components/FAQList';
-import { FAQFrontmatter, queryMdx } from 'libs/mdx';
+import FAQList from "components/FAQList";
+import { FAQFrontmatter, queryMdx } from "libs/mdx";
+
+export const metadata = {
+  title: "FAQ",
+  description: "Find out more about me, and my personal preferences.",
+};
 
 export default async function FAQ() {
-  const data = await queryMdx<FAQFrontmatter>('src/content/faq/*.{mdx,md}');
+  const data = await queryMdx<FAQFrontmatter>("src/content/faq/*.{mdx,md}");
 
   const faq = data.map((faq) => ({
     question: faq.frontmatter.question,
