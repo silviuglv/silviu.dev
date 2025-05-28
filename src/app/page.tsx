@@ -1,10 +1,10 @@
-import BlogPosts from 'components/BlogPosts';
-import SocialLinks from 'components/SocialLinks';
-import { queryPosts } from 'libs/content';
+import BlogPosts from "components/BlogPosts";
+import SocialLinks from "components/SocialLinks";
+import { queryPosts } from "libs/content";
 
 export default async function Home() {
   const data = await queryPosts({
-    devMode: process.env.NODE_ENV === 'development',
+    devMode: process.env.NODE_ENV === "development",
     limit: 10,
   });
 
