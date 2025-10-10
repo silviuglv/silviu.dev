@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="prose dark:prose-invert prose-sm max-w-none">
+        <div className="prose prose-zinc dark:prose-invert max-w-none">
           <h1>Silviu Glăvan</h1>
           <p className="text-lg">
             <em>Software Engineer</em>

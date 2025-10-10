@@ -19,7 +19,7 @@ export default async function Blog() {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="prose dark:prose-invert prose-sm max-w-none">
+        <div className="prose prose-zinc dark:prose-invert max-w-none">
           <h1>Blog</h1>
           <BlogPosts data={posts} />
         </div>

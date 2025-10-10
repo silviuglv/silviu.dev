@@ -1,15 +1,15 @@
-import type { ReactElement } from 'react';
+import type { ReactElement } from "react";
 
-import fs from 'node:fs/promises';
-import { glob } from 'glob';
-import path from 'node:path';
+import fs from "node:fs/promises";
+import { glob } from "glob";
+import path from "node:path";
 
-import { compileMDX } from 'next-mdx-remote/rsc';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import rehypeCodeTitles from 'rehype-code-titles';
+import { compileMDX } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
 
 type MDXContent<T extends Record<string, unknown>> = {
   frontmatter: T;
@@ -42,7 +42,7 @@ async function parseMdx<TFrontmatter extends Record<string, unknown>>(
 export async function getMdxFromPath<T extends Record<string, unknown>>(
   source: string
 ): Promise<MDXContent<T>> {
-  const raw = await fs.readFile(source, 'utf-8');
+  const raw = await fs.readFile(source, "utf-8");
   const parsed = await parseMdx<T>(raw);
 
   return {
