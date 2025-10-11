@@ -89,7 +89,7 @@ export default async function BlogPost(props: BlogPostProps) {
         }}
       />
       <div className="container">
-        <article className="prose prose-zinc dark:prose-invert mx-auto prose-code:text-[0.875rem]">
+        <article className="prose prose-zinc dark:prose-invert mx-auto max-w-[80ch] prose-code:text-[0.875rem]">
           <h1>{data.frontmatter.title}</h1>
           <p className="text-gray-400">
             {Intl.DateTimeFormat("en-GB", {
